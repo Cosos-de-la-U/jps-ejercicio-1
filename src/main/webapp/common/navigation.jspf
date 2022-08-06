@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.jsp">
+        <i class="fa-brands fa-codepen"></i> Ejercicios
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav d-flex barraflex">
+<%--            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>--%>
+            <div class="navbar-nav d-flex">
+                <div><a class="nav-item nav-link" href="index.jsp"><i class="fa-solid fa-dumbbell"></i> Dos</a></div>
+                <div><a class="nav-item nav-link" href="empresaSimon.jsp"><i class="fa-solid fa-dumbbell"></i> Tres</a></div>
+                <div><a class="nav-item nav-link" href="agendaPersonal.jsp"><i class="fa-solid fa-dumbbell"></i> Cuatro</a></div>
+                <div><a class="nav-item nav-link" href="carreraAlumno.jsp"><i class="fa-solid fa-dumbbell"></i> Cinco</a></div>
+            </div>
+            <div class="p-2 text-white my-name"><i class="fa-solid fa-jedi"></i> Raul Penate</div>
+    <%--            <a class="nav-item nav-link disabled" href="#">Disabled</a>--%>
+        </div>
+    </div>
+</nav>

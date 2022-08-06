@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="raulpenate-ejercicios:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>raulpenate-ejercicios</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="raulpenate-ejercicios-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="raulpenate-ejercicios:war exploded" />
+    </root>
+  </artifact>
+</component>

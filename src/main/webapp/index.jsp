@@ -1,4 +1,5 @@
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.lang.reflect.Array" %>
 <%@ include file="common/header.jspf" %>
 <%@ include file="common/navigation.jspf" %>
 
@@ -22,7 +23,7 @@
                 <div class="row">
                     <c:forEach var = "i" begin = "1" end = "${param.numero}">
                         <div class="col-3 py-1">
-                            <input type="text" name="ave${i}" class="form-control" placeholder="Ave ${i}">
+                            <input type="text" name="ave" class="form-control" placeholder="Ave ${i}">
                         </div>
                     </c:forEach>
                 </div>
@@ -31,7 +32,22 @@
     </c:if>
     <!-- Part 2 -->
     <c:if test="${param.ordenar != null}">
-        <c:out value="${'hola mundo'}"/>
+        <%
+            String [] arrayAve = request.getParameterValues("ave");
+            //Ojo que hay que usar java utils
+            if(arrayAve != null){
+                java.util.Arrays.sort(arrayAve);
+                // Le pasamos la variable a JSTL con esta baina
+                request.setAttribute("arrayAve",arrayAve);
+            }
+        %>
+        <div class="container">
+            <ul class="list-group row">
+                <c:forEach var = "item"  items="${arrayAve}">
+                    <li class="list-group-item col-5">${item}</li>
+                </c:forEach>
+            </ul>
+        </div>
     </c:if>
 </div>
 </body>
